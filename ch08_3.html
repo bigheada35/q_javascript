@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 인자
+        var varArr;
+
+        function funName(){
+            return arguments;
+        }
+
+        varArr = funName( 1,2,3,4,5,6,7);
+        console.log("varArr : "  + varArr);
+        console.log("varArry.length : " + varArr.length);
+
+        for(var i in varArr){
+            console.log("varArr[" + i + " ] "+ varArr[i]);
+
+        }
+        console.log("---------------------------------------");
+
+        varArr = funName("A", "B", "C", "D");
+        console.log("varArr : " + varArr);
+        console.log("varArr.length : " + varArr.length);
+
+		for(var i in varArr) {
+				console.log("varArr[" + i + "] :" + varArr[i]);
+			}
+
+/*결과:
+varArry.length : 7
+varArr[0 ] 1
+varArr[1 ] 2
+varArr[2 ] 3
+varArr[3 ] 4
+varArr[4 ] 5
+varArr[5 ] 6
+varArr[6 ] 7
+---------------------------------------
+varArr : [object Arguments]
+varArr.length : 4
+varArr[0] :A
+varArr[1] :B
+varArr[2] :C
+varArr[3] :D
+*/
+
+    </script>
+</body>
+</html>

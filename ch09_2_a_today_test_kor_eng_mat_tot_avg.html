@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let getTotal = function ( kor, eng, mat) {
+            let tot = Number(kor) + Number(eng) + Number(mat);
+            return tot;
+        }
+        let getAvg = function (tot){
+            let avg = Number(tot)/3.0;
+            return avg;
+        }
+        let getGra = function (iavg){
+
+            let avg = Number(iavg);
+            let gra;
+
+            if(avg >= 90)
+                gra = "수";
+            else if(avg >= 80)
+                gra = "우";
+            else if(avg >= 70)
+                gra = "미";
+            else if(avg >= 60)
+                gra = "양";
+            else 
+                gra = "가";
+
+            return gra;    
+        }
+
+        let kor = prompt("국어점수입력");
+        let eng = prompt("영어점수입력");
+        let mat = prompt("수학점수입력");
+       
+        let tot = getTotal(kor,eng,mat);
+        let avg = getAvg(tot);
+        let gra = getGra(avg);
+
+        console.log("tot: " + tot);
+        console.log("avg: " + avg);
+        console.log("등급: " + gra);
+
+    </script>
+</body>
+</html>

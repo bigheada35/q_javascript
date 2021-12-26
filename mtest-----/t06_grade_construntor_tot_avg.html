@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var kor = prompt("국어점수입력");
+        var eng  = prompt("영어점수입력");
+        var mat = prompt("수학점수입력");
+
+        function Grade(kor, eng, mat){
+            this.kor = Number(kor);
+            this.eng = Number(eng);
+            this.mat = Number(mat);
+
+            this.tot = function (){
+                return this.kor + this.eng + this.mat;
+            };
+            this.avg = function (){
+                return this.tot()/3.0;  
+            };
+
+
+        };
+        var grade = new Grade(kor, eng, mat);
+        console.log(" tot : " + grade.tot() );
+        console.log(" avg : " + grade.avg() );
+
+    </script>
+
+</body>
+</html>

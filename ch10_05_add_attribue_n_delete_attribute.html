@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //객체에 속성 추가및 삭제
+
+        var objName={
+            name : "Lee sun sin",
+            nation : "korea",
+            gender : "men",
+            character : "good",
+        };
+///////////////////////
+        var print = "";
+        for(var key in objName){
+            print += key + " : " + objName[key] + "\n"
+        }
+        console.log(print);
+///////////////////////
+        //속성 추가  --- 이게 된단 말인가??  ????????? 와우 ~!!!!!!!!!!!!
+        objName.talent = "fencing";
+        var print = "";
+        for(var key in objName){
+            print += key + " : " + objName[key] + "\n"
+        }
+        console.log(print);
+///////////////////////
+
+/*결과
+name : Lee sun sin
+nation : korea
+gender : men
+character : good
+
+ch10_05.html:33 name : Lee sun sin
+nation : korea
+gender : men
+character : good
+talent : fencing
+
+*/
+        /////속성 삭제 /////////////
+        delete(objName.talent);
+        var print = "";
+        for(var key in objName){
+            print += key + " : " + objName[key] + "\n"
+        }
+        console.log(print);
+
+/*결과:
+name : Lee sun sin
+nation : korea
+gender : men
+character : good
+*/
+
+    </script>
+
+
+</body>
+</html>

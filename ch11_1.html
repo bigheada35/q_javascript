@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//객체를 만드는 다양한 방법
+        //===========================
+        //기본적인 객체 생성
+        //===========================
+        var objBicycle = {
+            handle : "steel",
+            maxSpeed: "50km/h",
+            width : "200cm",
+            height: "100cm",
+            run : function(){
+                    return "go!";
+            }
+        };
+        console.log("objBicycle.maxSpeed : " + objBicycle.maxSpeed);
+        console.log("objBicycle.run : " + objBicycle.run());
+/*
+결과: 
+                objBicycle.maxSpeed : 50km/h
+ch11_1.html:24  objBicycle.run : go!
+*/
+        //===========================
+        //함수를 이용한 객체 생성
+        //===========================
+        function createCar(name, color, speed){
+            var carObj = {
+               name : name,
+               color : color,
+               speed : speed,
+               run : function(){
+                    return this.speed + "km/h";
+               }
+            };
+            return carObj;
+        };
+
+        var sorento = createCar("SORENTO", "GREY", 220);
+        console.log("sorento.name : " + sorento.name);
+        console.log("sorento.run : " + sorento.run());
+
+        var soul = createCar("SOUL" , "WHITE", 180);
+        console.log("soul.name : " + soul.name);
+        console.log("soul.run : " + soul.run());
+
+/*결과:
+objBicycle.maxSpeed : 50km/h
+ch11_1.html:24 objBicycle.run : go!
+
+ch11_1.html:44 sorento.name : SORENTO
+ch11_1.html:45 sorento.run : 220km/h
+
+ch11_1.html:48 soul.name : SOUL
+ch11_1.html:49 soul.run : 180km/h
+*/
+
+        //===========================
+        //생성자를 이용한 객체 생성
+        //===========================
+        function Airplane (name, color, speed){
+
+            //this = {}  // 이것 이 생략된 것을 볼수 잇음.
+
+            // 객체는 동적으로 속성의 추가가 가능하다.
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+            this.fly = function(){
+                return this.speed + "fly!"
+            }
+
+        };
+
+        var boeing747 = new Airplane("boeing747", "whiet/blue", "600km/h" );
+        console.log("  " + boeing747.name);
+        console.log("  " + boeing747.color);
+        console.log("  " + boeing747.fly());
+
+/*결과:
+                objBicycle.maxSpeed : 50km/h
+ch11_1.html:24  objBicycle.run : go!
+ch11_1.html:44  sorento.name : SORENTO
+ch11_1.html:45  sorento.run : 220km/h
+ch11_1.html:48  soul.name : SOUL
+ch11_1.html:49  soul.run : 180km/h
+ch11_1.html:79   boeing747
+ch11_1.html:80   whiet/blue
+ch11_1.html:81   600km/hfly!
+*/
+
+
+    </script>
+
+
+</body>
+</html>

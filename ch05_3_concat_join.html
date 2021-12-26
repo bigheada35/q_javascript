@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //어레이 의 인덱스 구하기
+
+    var varArrIndex = new Array(123, "ABC", "가나다", "abc", "가나다");
+    alert("--1 :    "+  varArrIndex.indexOf("가나다"));
+    alert("--2 :    "+ varArrIndex.indexOf("ABC"));
+    alert("--3 :    "+ varArrIndex.lastIndexOf("가나다"));
+    alert("--4 :    " +  varArrIndex.lastIndexOf("xyz"));   /// 없으면 -1 을 리턴한다.
+
+        //concat  --j 어레이 뒤에 어레이를  붙인다.
+
+    var varArrFir = new Array("ABC", "DEF", "GHI", "JKL");
+    var varArrSec = new Array ( "가나다", "라마바", "사아차", "카타파");
+     var varArrRes = varArrFir.concat(varArrSec);  // 결과 :  ABC,DEF,GHI,JKL,가나다,라마바,사아차,카타파
+     
+    alert("--8 :    " +varArrFir);//결과 :ABC,DEF,GHI,JKL
+    alert("--8 :    " +varArrRes);//결과 :ABC,DEF,GHI,JKL,가나다,라마바,사아차,카타파
+    alert("--8 :    " +varArrFir);//결과 :ABC,DEF,GHI,JKL
+
+
+        // join ()   -- 어레이 사이에다가  문자를 삽입한다.
+
+        var varArrJoin = new Array("AB", "CD", "EF", "HI");
+        alert("--9 :    " + varArrJoin.join()); // 결과 : AB,CD,EF,HI 
+        alert("--9 :    " + varArrJoin.join("|"));  // 결과 :  AB|CD|EF|HI
+        alert("--9 :    " + varArrJoin.join(":"));  // 결과 : AB:CD:EF:HI
+        alert("--9 :    " + varArrJoin.toString());  // 결과 : AB,CD,EF,HI
+        alert("--9 :    " + varArrJoin.join()); // 결과 :  AB,CD,EF,HI
+
+
+    </script>
+
+</body>
+</html>

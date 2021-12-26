@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var kor = prompt("국어 입력");
+        var eng = prompt("영어 입력");
+        var mat = prompt("수학 입력");
+
+                //===========================
+                //생성자를 이용한 객체 생성
+                //===========================
+                function Grade (kor, eng, mat){
+
+                    //this = {}  // 이것 이 생략된 것을 볼수 잇음.
+
+                    // 객체는 동적으로 속성의 추가가 가능하다.
+                    this.kor = Number(kor);
+                    this.eng = Number(eng);
+                    this.mat = Number(mat);
+                    this.tot = function(){
+                        this.tot = this.kor + this.eng + this.mat;
+                        return this.tot;
+                    }
+                    this.avg = function(){
+                        this.avg = this.tot/3.0;
+                        return this.avg;
+                    }
+
+                };
+                //===========================
+
+                var grade = new Grade(kor, eng, mat );
+                console.log("tot : " + grade.tot());
+                console.log("avg : " + grade.avg());
+
+                //===========================
+                //함수를 이용한 객체 생성
+                //===========================
+                function Grade2(kor, eng, mat){
+                    var gradeObj = {
+                        kor: Number(kor),
+                        eng : Number(eng),
+                        mat : Number(mat),
+                        tot : function(){
+                            return kor + eng+ mat;
+                        }
+                        avg : function(){
+                            return tot/3.0;
+                        }
+                    };
+                    return gradeObj;
+                }
+
+
+
+    </script>
+
+
+</body>
+</html>

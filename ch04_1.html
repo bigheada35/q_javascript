@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        	/*
+				할당 연산자
+			*/
+        var varTemp1 = 100;
+        var varTemp2 = 200;
+        var varTemp3 = varTemp1 + varTemp2;
+        console.log("varTemp3: " + varTemp3);
+
+        
+			/*
+				사칙연산자 및 나머지연산자
+			*/
+			
+            var varFirstNum = 10;
+            var varSecondNum = 4;
+            var varResult = 0;
+
+            varResult = varFirstNum + varSecondNum;
+            console.log("varResult: " + varResult);
+
+            varResult = varFirstNum - varSecondNum;
+            console.log("varResult: " + varResult);
+
+            varResult = varFirstNum * varSecondNum;
+            console.log("varResult: " + varResult);
+
+            varResult = varFirstNum / varSecondNum;
+            console.log("varResult: " + varResult);
+
+            varResult = varFirstNum % varSecondNum;
+            console.log("varResult: " + varResult);
+
+/*결과;
+                    varResult: 14
+ch04_1.html:32      varResult: 6
+ch04_1.html:35      varResult: 40
+ch04_1.html:38      varResult: 2.5
+ch04_1.html:41      varResult: 2
+*/
+            console.log("--------");
+			/*
+				자동 증감 연산자
+			*/
+            var varIncrease = 10;
+            var varDecrease = 10;
+            
+            varIncrease = ++ varIncrease;
+            varDecrease = --varDecrease;
+
+            console.log("varIncrease: " + varIncrease);
+            console.log("varDecrease: " + varDecrease);
+
+            varIncrease = varIncrease++;
+            varDecrease = varDecrease--;
+
+            console.log("varIncrease: " + varIncrease);
+            console.log("varDecrease: " + varDecrease);
+
+/*결과;
+            --------
+ch04_1.html:60 varIncrease: 11
+ch04_1.html:61 varDecrease: 9
+ch04_1.html:66 varIncrease: 11  <--여기 좀 이상하다. 
+ch04_1.html:67 varDecrease: 9
+*/
+    console.log("---2-----");
+        var varNum = 10;
+        console.log(varNum > 11);
+        console.log(varNum < 11);
+        console.log(varNum >= 11);
+        console.log(varNum <= 11);
+        console.log(varNum == 11);
+        console.log(varNum != 11);
+
+        /*
+        ---2-----
+​ false
+​ true
+​ false
+​ true
+​ false
+​ true
+*/
+    console.log("---3-----");
+			/*
+				논리 연산자
+			*/
+			
+			var varLogic1 = true;
+			var varLogic2 = false;
+			console.log(varLogic1 && varLogic2);	// 참 && 거짓 => 거짓
+			console.log(varLogic1 || varLogic2);	// 참 || 거짓 => 참
+			
+			varLogic1 = true;
+			varLogic2 = true;
+			console.log(varLogic1 && varLogic2);	// 참 && 참 => 참
+			console.log(varLogic1 || varLogic2);	// 참 || 참 => 참
+			
+			varLogic1 = false;
+			varLogic2 = false;
+			console.log(varLogic1 && varLogic2);	// 거짓 && 거짓 => 거짓
+			console.log(varLogic1 || varLogic2);	// 거짓 || 거짓 => 거짓
+			
+ /*        ---3-----
+​ false
+​ true
+​ true
+​ true
+​ false
+​ false	
+*/
+
+		
+			/*
+				복합대입 연산자
+			*/
+        var varComplex = 100;
+        varComplex += 3;
+        console.log( "varComplex :" + varComplex);
+
+        var varComplex = 100;
+        varComplex -= 3;
+        console.log( "varComplex :" + varComplex);
+
+        var varComplex = 100;
+        varComplex *= 3;
+        console.log( "varComplex :" + varComplex);
+
+        var varComplex = 100;
+        varComplex /= 3;
+        console.log( "varComplex :" + varComplex);
+
+        var varComplex = 100;
+        varComplex %= 3;
+        console.log( "varComplex :" + varComplex);
+
+/*
+arComplex :103
+ch04_1.html:133 varComplex :97
+ch04_1.html:137 varComplex :300
+ch04_1.html:141 varComplex :33.333333333333336
+ch04_1.html:145 varComplex :1
+*/
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // continue;
+        var varResult = 0;
+        for(var i = 1; i < 10; i++){
+
+            if( (i%2 == 0) ||  (i%3 == 0) )
+                continue;
+            console.log("i : " + i);
+            varResult += i;
+        }
+        console.log("varResult: " + varResult);
+
+        var varNum = 0;
+        var varSum = 0;
+        while(varNum < 10){
+            console.log("varNum : " + varNum);
+            varSum += varNum;
+            varNum++;
+
+            if(varSum > 20){
+                console.log("varSum : " + varSum);
+                break;
+            }
+        }
+
+        for(var i = 0 ; true; i++){
+            console.log("i : " + i);
+            if(i  > 50) 
+                break;
+
+        }
+
+
+    </script>
+</body>
+</html>

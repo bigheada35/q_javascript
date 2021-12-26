@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function starTower(){
+
+        return(
+            function (layer){
+                for(var i=0; i<layer; i++){
+                    for(var j=0; j<layer; j++){
+                        if(j<=i)
+                            document.write("*");
+                        else
+                            document.write("&nbsp");// non breaking space
+                    }
+                    document.write("<br>")
+                }
+            }
+        );
+
+    }
+
+    var func = starTower();
+    func(5);
+</script>
+</body>
+</html>

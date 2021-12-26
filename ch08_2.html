@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 매개변수와 반환(리턴)값
+        function funName( x, y, z){
+            console.log("x : " + x);
+            console.log("y : " + y);
+            console.log("z ; " + z);
+
+            let result = x * y + z;
+            return result;
+        }
+
+        let varResult = 0;
+        varResult = funName(2, 3, 4);
+        console.log("varResult : " + varResult);
+
+        //신기 : 안죽네, 끝의 것은 안들어 간다, 
+        varResult = funName(2, 3, 4, 5 ); 
+        console.log("varResult : " + varResult);
+
+        // 끝의것은 안들어 갔서 null 임
+        varResult = funName(2, 3);
+        console.log("varResult : " + varResult);
+
+
+    </script>
+</body>
+</html>

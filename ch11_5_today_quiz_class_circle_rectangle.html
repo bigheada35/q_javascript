@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function Circle(radius){
+            this.radius = Number(radius);
+            this.getArea = function (){
+                return this.radius*this.radius*Math.PI;
+            };
+        };
+        let circle = new Circle(100);
+        console.log("circle: area: " + circle.getArea());
+
+        function Rectangle(width, height){
+            this.width = Number(width);
+            this.height = Number(height);
+            this.getArea = function (){
+                let area = this.width*this.height;
+                return area;
+            };
+        };
+        let rec = new Rectangle(100, 100);
+        console.log("rec : area : " + rec.getArea());
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+	/*
+				변수에는 모든 자료형을 담을 수 있습니다.
+				자료형 : 문자, 숫자, 불리언, 함수, 객체, undefined
+			*/
+			var varStr = "ABCDEF";
+			console.log("varStr : " + varStr);
+			
+			var varNum = 123456;
+			console.log("varNum : " + varNum);
+			
+			var varBoo = false;
+			console.log("varBoo : " + varBoo);
+			
+			var varFun = function fun(){};
+			console.log("varFun : " + varFun);
+			
+			var varObj = {};
+			console.log("varObj : " + varObj);
+			
+			var varUnd = undefined;
+			console.log("varUnd : " + varUnd);
+			
+/*
+결과:
+varStr : ABCDEF
+varNum : 123456
+varBoo : false
+varFun : function fun(){}
+varObj : [object Object]
+varUnd : undefined
+*/
+
+	        /*
+				자료형 변환
+			*/
+			var varType = "123";
+			console.log("varType type : " + typeof(varType));
+			console.log("varType : " + (varType + 1000));
+			
+			varType = Number(varType);
+			console.log("varType type : " + typeof(varType));
+			console.log("varType : " + (varType + 1000));
+			
+
+            console.log("---------------");
+
+            /*
+				javascript에서는 변수에 담긴 자료형을 변경할 수 있습니다.
+			*/
+			var varTemp;
+			varTemp = "ABCDEF";
+			console.log("varTemp : " + varTemp);
+			console.log("typeof : " + typeof(varTemp));
+			varTemp = 123456;
+			console.log("varTemp : " + varTemp);
+			console.log("typeof : " + typeof(varTemp));
+			varTemp = true;
+			console.log("varTemp : " + varTemp);
+			console.log("typeof : " + typeof(varTemp));
+			varTemp = function() {};
+			console.log("varTemp : " + varTemp);
+			console.log("typeof : " + typeof(varTemp));
+			varTemp = {};
+			console.log("varTemp : " + varTemp);
+			console.log("typeof : " + typeof(varTemp));
+			varTemp = undefined;
+			console.log("varTemp : " + varTemp);
+			console.log("typeof : " + typeof(varTemp));
+
+        /*결과:
+---------------
+                varTemp : ABCDEF
+ch03_1.html:63  typeof : string
+ch03_1.html:65 varTemp : 123456
+ch03_1.html:66 typeof : number
+ch03_1.html:68 varTemp : true
+ch03_1.html:69 typeof : boolean
+ch03_1.html:71 varTemp : function() {}
+ch03_1.html:72 typeof : function
+ch03_1.html:74 varTemp : [object Object]
+ch03_1.html:75 typeof : object
+ch03_1.html:77 varTemp : undefined
+ch03_1.html:78 typeof : undefined
+        */
+
+/*
+결과
+varType type : string
+varType : 1231000
+varType type : number
+varType : 1123
+*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //내장 함수
+
+    alert("내장함수: 기본적으로 제공하는 함수");
+    console.log("내장함수: 기본적으로 제공하는 함수");
+
+    //시간관련 함수 
+
+    var printTimeOutId = setTimeout(
+                            function(){
+                               clearInterval(printIntervalId) ;
+                               console.log("종료!");
+                               //alert("내장함수");
+
+                            }
+                            , 12000);
+
+    var printIntervalId = setInterval(
+                            function(){
+                                console.log("*")
+                            }
+                            ,2000
+                            );
+    //eval 함수 : 문자열을 코드(소스)로 이용
+    // 
+    var varEval = "console.log('eval함수!')";
+    eval(varEval);
+
+    varEval = "document.write('<p>eval함수</p>');";
+    eval(varEval);
+
+    </script>                            
+</body>
+</html>

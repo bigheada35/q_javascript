@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+				Javascript 자료형에는 숫자, 문자, 불리언, 함수, 객체, undefined가 있다.
+			*/
+			var varNum = 123;
+			console.log("varNum : " + varNum);
+			
+			var varStr = 'ABC';
+			console.log("varStr : " + varStr);
+			
+			var varBoo = true;
+			console.log("varBoo : " + varBoo);
+			
+			var varFun = function() {};
+			console.log("varFun : " + varFun);
+			
+			var varObj = {};
+			console.log("varObj : " + varObj);
+			
+			var varUnd = undefined;
+			console.log("varUnd : " + varUnd);
+			
+			/*
+				자료형 변환
+			*/
+			var varType = "123";
+			console.log("varType type : " + typeof(varType));
+			console.log("varType : " + (varType + 1000));
+			
+			varType = Number(varType);
+			console.log("varType type : " + typeof(varType));
+			console.log("varType : " + (varType + 1000));
+
+            /*결과:
+                varNum : 123
+ch03_2.html:19  varStr : ABC
+ch03_2.html:22  varBoo : true
+ch03_2.html:25  varFun : function() {}
+ch03_2.html:28  varObj : [object Object]
+ch03_2.html:31  varUnd : undefined
+
+ch03_2.html:37  varType type : string
+ch03_2.html:38  varType : 1231000
+ch03_2.html:41  varType type : number
+ch03_2.html:42  varType : 1123
+            */
+    </script>
+    
+
+
+
+</body>
+</html>

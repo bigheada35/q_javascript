@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  // <-- 이거 주의 , 까먹고 안쓴다. 자꾸.
+        //함수 반환
+        function funTower(){
+
+            return function(x) {
+                
+                for(var i=0; i<x; i++){
+                    for(var j=0; j<x; j++){
+                    
+                        if(j<=i)
+                            document.write( "*");
+                        else
+                            document.write( "&nbsp");
+                    }
+                    document.write("<br>");
+
+                }
+            };  // <--이거 주의 
+
+
+        }
+
+    var returnTower = funTower();
+    returnTower(4);
+    </script>
+
+</body>
+</html>
