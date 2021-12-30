@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+		
+        window.onload = function(){
+            var lf = document.getElementById("loginForm");// 다른부분
+            lf.onsubmit = function() {// 다른부분
+                if(document.getElementById("uId").value == "") {
+                    alert("user id blank!!");
+                    return false;// 다른부분
+                } else if(document.getElementById("uPw").value == "") {
+                    alert("user pw blank!!");
+                    return false;// 다른부분
+                } else {
+                    alert("login ok!!");
+                    return true; // 다른부분
+                }
+            };
+        }
+    </script>
+        
+    <style>
+        
+    </style>
+
+
+</head>
+<body>
+    
+    <form id="loginForm" action="http://www.google.com">
+        USER ID : <input id="uId" type="text" name="uId"><br>
+        USER PW : <input id="uPw" type="password" name="upw"><br>
+        <input id="sbmBtn" type="submit" value="SUBMIT">// 다른부분 type="submit"을 사용
+        <input id="resBtn" type="reset" value="RESET">// 다른부분 type="reset"을 사용
+    </form>
+
+
+</body>
+</html>
