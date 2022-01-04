@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                $("#rspImg").attr("src", "./img/21.PNG");
+            });
+
+            $(".btn2").click(function(){
+                $("#rspImg").attr("src", "./img/22.PNG");
+
+            });
+
+            $(".btn3").click(function(){
+                $("#rspImg").attr("src", "./img/23.PNG");
+
+            } );
+
+        });
+    </script>
+
+</head>
+<body>
+    <div id="imgdiv">
+        <img  id="rspImg" src="" alt="">
+
+    </div>
+
+    <!-- <div id="wrap2"> -->
+        <div id="wrap">
+            <input class="btn1" type="button" value="가위">
+            <input class="btn2" type="button" value="바위">
+            <input class="btn3" type="button" value="보">
+        </div>
+    <!-- </div>     -->
+</body>
+</html>

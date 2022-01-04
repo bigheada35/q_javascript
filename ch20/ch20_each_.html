@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("p").each(   (index,item)=>{
+                    console.log(index  + ": "  + $(item).text());
+
+                    if(index % 2 == 0){
+                        $(item).css("background", "#dfdfdf");
+                    }
+            });
+
+
+           //----테스트1---
+            console.log("htmlMethod : ", + $("#htmlMethod").html() );
+            console.log("htmlMethod : " + $("#htmlMethod").html());
+
+            // html ( ) 안에, "<strong>new</strong>" 을 집어 넣다.
+            $("#htmlMethod").html("<strong>new</strong>");
+            $("#htmlMethod").html("<strong>new</strong> " + $("#textMethod").html());
+
+
+            //----테스트2---
+            //addClsss() 클래스 속성 추가
+            $("#addClass").addClass("addCla");
+            $(".addCla").css("background", "#ff0000");
+
+            //----테스트3---
+           $(".remCla").css("background", "#00ff00");
+           $(".remCla").css("background", "#0000ff");
+
+            //----테스트4---  attrMethod 밑에 있는 img   2개 다 보인다.
+           $("#attrMethod img").attr("src", "img/logo.png");
+
+           // ----파일 이름 가지고 프린트 한다.
+            console.log(   $("#attrMethod img").attr("src") );
+
+            //----   속성 제거
+            $("#attrMethod img").removeAttr("src");
+
+            //---- css()	스타일 추가
+            $("#cssMethod").css("width", "300px").css("height", "100px");
+            $("#cssMethod").css("background", "#ff0000");
+
+            console.log("cssMethod css width : " + $("#cssMethod").css("width"));
+            console.log("cssMethod css height : " + $("#cssMethod").css("height"));
+            console.log("cssMethod css background : " + $("#cssMethod").css("background"));
+
+        });
+
+    </script>
+
+</head>
+<body>
+    
+    <p> Hello javascript! </p>
+    <p> Hello jQuery! </p>
+    <p> Hello node.js! </p>
+
+    <!-- ----테스트1--- -->
+    <div id="htmlMethod">  --111-------html()---------- 메서드   </div>
+    <div id="textMethod"> ----222-------text()------------- 메서드 </div>
+
+    <br>
+    <br>
+
+    <!-- ----테스트2--- -->  <!-- ----테스트3--- -->
+    <div id="addClass"> ---333--addClass() 메서드------ </div>
+    <div id="removeClass" class="remCla"> ---444--- removeClass() 메서드----- </div>
+
+
+    <div id="attrMethod">
+        <img>
+        <br>
+        <img>
+    </div>
+
+    <div id="cssMethod">  ---5--- CSS METHOD </div>
+
+    <div id="removeMthod"> ---6--- Remove Object! </div>
+    <div id="emptyMthod"> ---7---Empty Object! </div>
+
+</body>
+</html>

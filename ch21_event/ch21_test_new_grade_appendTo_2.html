@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="jquery-3.2.1.min.js"></script>
+
+
+    <script>
+
+
+        function Grade (kor, eng, mat){
+            this.kor = Number(kor);
+            this.eng = Number(eng);
+            this.mat = Number(mat);
+
+            this.tot = function(){
+                return this.kor + this.eng + this.mat;
+            };
+
+            this.avg = function(){
+                return (this.kor + this.eng + this.mat)/3.0;
+            };
+
+        };
+
+
+        $(document).ready(function(){
+
+
+
+
+
+            $("#tot").click(function(){
+                var wrapObj = $("#wrap");
+                
+                
+                var grade = new Grade($("#kor").val(), $("#eng").val(),$("#mat").val() );
+
+                console.log("tot ===== : " + grade.tot());
+                console.log("avg ===== : " + grade.avg());
+                
+                var divObj1 = $('<div id="resultDiv1">  총점은 '+ grade.tot() +  ' </div>');
+                var divObj2 = $('<div id="resultDiv2">  평균은 '+ grade.avg() +  ' </div>');
+               
+                divObj1.appendTo(wrapObj);
+                divObj2.appendTo(wrapObj);
+
+            });
+
+            $("#avg").click(function(){
+
+                
+            });
+
+            $("#rst").click(function(){
+
+                               
+                $("#resultDiv1").remove();
+                $("#resultDiv2").remove();
+                $("#kor" ).val('');
+                $("#eng").val('');
+                $("#mat").val('');
+            });
+
+
+        });
+
+        
+
+    </script>
+
+
+</head>
+<body>
+    
+
+    <form id="gradeForm" action="">
+        국어점수<input id="kor" type="text" name="kor">  <br>
+        영어점수<input id="eng" type="text" name="eng"> <br>
+        수학점수<input id="mat" type="text" name ="mat"><br>
+        <input id="tot" type="button" value="총점">  
+        <!-- <input id="avg" type="button" value="평균"> -->
+        <input id="rst" type="button" value="리셋">
+    </form>
+
+    <div id="wrap">
+        <div> </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function(){
+
+            var me1 = document.getElementById("mouseEvent1");
+            me1.addEventListener("click", function(){
+                console.log("click event1");
+
+                var logoNode = document.getElementById("logoImg");
+                logoNode.setAttribute("src", "./img/21.PNG");
+                logoNode.setAttribute("width", 200);
+
+            }, false);
+
+            var me2 = document.getElementById("mouseEvent2");
+            me2.addEventListener("click", function(){
+                console.log("click event2");
+
+                var logoNode = document.getElementById("logoImg");
+                logoNode.setAttribute("src", "./img/22.PNG");
+                logoNode.setAttribute("width", 200);
+
+            }, false);
+
+            var me3 = document.getElementById("mouseEvent3");
+            me3.addEventListener("click", function(){
+                console.log("click event3");
+
+                var logoNode = document.getElementById("logoImg");
+                logoNode.setAttribute("src", "./img/23.PNG");
+                logoNode.setAttribute("width", 200);
+
+            }, false);
+        };
+
+    </script>
+
+    <style>
+        #imgdiv{
+            text-align: center;
+            height: 200px;
+        }
+        #wrap2{
+            width: 100%;
+           
+        }
+        #wrap{
+            width: 600px;
+            margin: 0 auto;
+
+            overflow: hidden;
+
+        }
+        #mouseEvent1 {
+            float:left;
+
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            font-weight: bolder;
+        }
+        #mouseEvent2 {
+            float:left;
+
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: rgb(9, 255, 0);
+            color: #fff;
+            font-weight: bolder;
+        }
+        #mouseEvent3 {
+            float:left;
+
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: rgb(17, 0, 255);
+            color: #fff;
+            font-weight: bolder;
+        }        
+    </style>
+
+</head>
+<body>
+    <div id="imgdiv">
+        <img id="logoImg" src="" alt="">
+    </div>
+    <div id="wrap2">
+        <div id="wrap">
+            <div id="mouseEvent1">가위</div>
+            <div id="mouseEvent2">바위</div>
+            <div id="mouseEvent3">보</div>
+        </div>    
+    </div>    
+</body>
+</html>

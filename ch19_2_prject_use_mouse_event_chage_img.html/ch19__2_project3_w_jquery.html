@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            
+            $(".Btn1").click(function(){
+                console.log("click event1");
+
+                var logoNode = document.getElementById("logoImg");
+                logoNode.setAttribute("src", "./img/21.PNG");
+                logoNode.setAttribute("width", 200);
+
+            });
+
+           
+            $(".Btn2").click( function(){
+                console.log("click event2");
+
+                var logoNode = document.getElementById("logoImg");
+                logoNode.setAttribute("src", "./img/22.PNG");
+                logoNode.setAttribute("width", 200);
+
+            });
+
+            
+            $(".Btn3").click( function(){
+                console.log("click event3");
+
+                var logoNode = document.getElementById("logoImg");
+                logoNode.setAttribute("src", "./img/23.PNG");
+                logoNode.setAttribute("width", 200);
+
+            });
+        });
+
+    </script>
+
+    <style>
+        #imgdiv{
+            text-align: center;
+            height: 200px;
+        }
+        #wrap2{
+            width: 100%;
+           
+        }
+        #wrap{
+            width: 600px;
+            margin: 0 auto;
+
+            overflow: hidden;
+
+        }
+        .Btn1 {
+            float:left;
+
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            font-weight: bolder;
+        }
+        .Btn2 {
+            float:left;
+
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: rgb(9, 255, 0);
+            color: #fff;
+            font-weight: bolder;
+        }
+        .Btn3 {
+            float:left;
+
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: rgb(17, 0, 255);
+            color: #fff;
+            font-weight: bolder;
+        }        
+    </style>
+
+</head>
+<body>
+    <div id="imgdiv">
+        <img id="logoImg" src="" alt="">
+    </div>
+    <div id="wrap2">
+        <div id="wrap">
+            
+            <img class="Btn1" src="./img/21.PNG" alt="">
+            <img class="Btn2" src="./img/22.PNG" alt="">
+            <img class="Btn3" src="./img/23.PNG" alt="">
+        </div>    
+    </div>    
+</body>
+</html>

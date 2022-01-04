@@ -12,6 +12,13 @@
         $(document).ready(
             ()=>{
                 $("input[type='text']").css("background", "#ff0000");     
+                $("input[type='text']").css("color", "#ff0000");	//속성 선택자
+				$("input[type='password']").css("color", "#0000ff");	//속성 선택자
+				$("input:submit").css("fontSize", "1.2em");			//필터 선택자
+				var chk = $("input:checked").val();		//필터 선택자
+				console.log("chk : " + chk);
+				
+				$("li:nth-child(2n+1)").css("background", "#ffff00");	//함수 선택자
             }
 
         );
