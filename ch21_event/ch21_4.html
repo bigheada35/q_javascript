@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script>
+            $(document).ready(function () {
+
+                $("#loginForm").submit(function (event) {
+
+                    if($("#uId").val() == "") {
+						alert("user id blan,,,!!");
+						event.preventDefault();
+					} else if($("#uPw").val() == "") {
+						alert("user pw blank,,,!!");
+						event.preventDefault();
+					} else {
+						alert("login ok!!");
+					}
+                });
+
+
+            });
+
+    </script>
+
+</head>
+<body>
+    
+    <form id="loginForm" action="http://www.google.com">
+        USER ID : <input id="uId" type="text" name="uId"><br>
+        USER PW : <input id="uPw" type="password" name="upw"><br>
+        <input id="sbmBtn" type="submit" value="SUBMIT">
+        <input id="resBtn" type="reset" value="RESET">
+
+    </form>
+
+
+</body>
+</html>
